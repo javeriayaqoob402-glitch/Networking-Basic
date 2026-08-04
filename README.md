@@ -40,6 +40,11 @@ CURL and wget are both command-line tools used to download content from servers,
 **Command Examples**
 wget: wget [https://example.com/file.zip](https://example.com/file.zip)
 curl: curl -O [https://example.com/file.zip](https://example.com/file.zip)
+**curl**
+curl -O https://example.com/file.zip
+**wget**
+Wget (World Wide Web Get) ek open-source, non-interactive command-line utility hai jo servers se files aur websites download karne ke liye istemal hoti hai. Yeh HTTP, HTTPS, aur FTP protocols ko support karta hai.
+
 
 
 
