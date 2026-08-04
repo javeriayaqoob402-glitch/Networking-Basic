@@ -1,50 +1,6 @@
-# Networking-Basic
-Networking is simply connecting two or more devices (like your phone, computer, or TV) together so they can talk to each other and share things.
-**Example:**
-Think of networking like a postal system:
-Devices (computers, phones) are like houses.
-Data (photos, messages, videos) are like letters.
-Routers & Cables are like post offices and roads that deliver the letters to the right house.
-**Difference between IP Address and MAC Address?**
-An IP address identifies a device's location on a network logically and changes based on where you connect, while a MAC address is a permanent, physical identifier burned directly into your device's network hardware.
-**Feature:**
-IP Address (Logical)	MAC Address (Physical)
-Purpose	Routes data across different networks (e.g., across the internet)	Identifies your device on the immediate local network (LAN)
-Changeability	Dynamic — changes whenever you join a new Wi-Fi or router	Static — permanently assigned by the hardware manufacturer
-Layer (OSI)	Network Layer (Layer 3)	Data Link Layer (Layer 2)
-Format	IPv4 (192.168.1.1) or IPv6 (2001:db8::1)	12-digit Hexadecimal (00:1A:2B:3C:4D:5E)
-Analogy	Your mailing address (changes when you move homes)	Your fingerprint or ID number (never changes)
-**How They Work Together**
-When sending data across a network:
-The IP address guides data from the sender's network all the way across the internet to the destination network.
-The MAC address ensures that once the data reaches the correct destination router, it gets delivered to your specific device rather than another device on the same local Wi-fi.
-**what is loop back?**
-**Loopback** (or a loopback address) is a virtual network interface that a computer uses to send network traffic back to itself.
-It allows your device to talk to itself over network protocols without sending any data out to the physical network or internet.
-**Key Concepts**
-IP Address: The standard loopback IP address is 127.0.0.1 (IPv4) or ::1 (IPv6).
-Hostname: It is commonly referred to by the domain name localhost.
-Traffic Routing: When a program sends data to 127.0.0.1, the network hardware bypasses the physical network card (NIC) and routes the traffic directly back into the local operating system.
-**TTL and traceroute**
-TTL (Time to Live) and Traceroute are network tools used to track the path data takes across the internet and prevent network loops.
-**Key Concepts**
-**TTL (Time to Live):** A numerical limit (hop count) set inside a data packet. Every time the packet passes through a router (a "hop"), the TTL value decreases by 1. If TTL reaches 0, the router drops the packet and sends a Time Exceeded message back to you. This prevents lost packets from traveling endlessly around the network.
-
-**Traceroute:** A diagnostic tool that maps the exact route data travels from your computer to a destination IP/website. It works by deliberately sending packets with increasing TTL values (TTL=1, TTL=2, TTL=3...) to identify every router along the way.
-**COMMANDS**
-traceroute 8.8.8.8
-**ttl**
-TTL (Time to Live) is a counter or time limit embedded inside a data packet that tells it how long to exist before being discarded.
-**Difference between curl and wget?**
-CURL and wget are both command-line tools used to download content from servers, but they serve different purposes depending on what you are trying to do.
-**Command Examples**
-wget: wget [https://example.com/file.zip](https://example.com/file.zip)
-curl: curl -O [https://example.com/file.zip](https://example.com/file.zip)
-**curl**
-curl -O https://example.com/file.zip
-**wget**
-Wget (World Wide Web Get) ek open-source, non-interactive command-line utility hai jo servers se files aur websites download karne ke liye istemal hoti hai. Yeh HTTP, HTTPS, aur FTP protocols ko support karta hai.
 # Internet, Network Aur Web Tools
+
+---
 
 * **Region/Country Level:** Internet ek poori region ya multiple countries ko connect karta hai.
 * **City Level:** Isi tarah agar sirf ek city ke andar multiple offices ya houses connect hon, to wo bhi ek network hai lekin chhote scale par.
@@ -60,20 +16,28 @@ Matlab network sirf devices ko aapas mein jodne ka system hai — chahe wo ek gh
 
 ---
 
-## IP Address Aur Hardware Identity
+## IP Address
 
-### IP Address
 IP (Internet Protocol) Address har device ki apni ek unique identity hoti hai network ke andar, jis se wo pehchana jata hai.
 * **Example:** Home router ek IP address rakhta hai jis se wo network mein pehchana jata hai.
 
-### NIC — Network Interface Card
+---
+
+## NIC — Network Interface Card
+
 Har device (jaise laptop) ke andar ek Network Interface Card (NIC) hota hai. Jab bhi koi device internet se connect hoti hai, to us device ka apna NIC hota hai jo connection banane mein madad karta hai.
 
-### MAC Address
+---
+
+## MAC Address
+
 Jab koi device banai jati hai, to us par MAC address likh diya jata hai — ye ek permanent (fixed) address hota hai jo har device ke NIC ke sath hamesha ke liye juda hota hai.
 * **Kaam Karne Ka Tarika:** Agar koi mobile device ko wifi router se connect karna chahe, to router us mobile ka MAC address dekhta hai aur badle mein us device ko ek IP address assign kar deta hai — taake wo device network mein pehchani ja sake.
 
-### MAC Address vs IP Address — Difference
+---
+
+## MAC Address vs IP Address — Difference
+
 * **MAC Address:** Kabhi change nahi hota — ye device ke sath permanently juda hota hai (hardware level identity).
 * **IP Address:** Change ho sakta hai — jab bhi device kisi naye network se connect hoti hai, to usay naya IP address mil sakta hai.
 * **IP Address Kaun Deta Hai:** IP address hamesha router deta hai, jis se device internet use kar sakti hai.
@@ -100,13 +64,9 @@ Ye command device ka IP address, router ka IP, aur MAC address — teeno informa
 ### Ping
 Ping command kisi doosre device ko "Hello" kehne jaisa kaam karti hai — matlab ye check karti hai ke koi device active (alive) hai ya nahi.
 
-* **Ping Work:** Ping ek data ka packet resi device ko bhejti hai taake pata chal sake ke wo device abhi active hai ya nahi. Data packets ke zariye ek device doosre device ko data send karti hai.
+* **Ping work:** Ping ek data ka packet resi device ko bhejti hai taake pata chal sake ke wo device abhi active hai ya nahi. Data packets ke zariye ek device doosre device ko data send karti hai.
 * **Important Note:** Agar kisi device par firewall ya VPN use ho raha ho, ya device off ho, to us waqt ping kaam nahi karegi — response nahi milega.
 
 **Example — Ping Ek Fixed IP Ko:**
 ```bash
 ping 8.8.8.8
-
-
-
-
