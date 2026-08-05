@@ -72,15 +72,18 @@ Ping command kisi doosre device ko "Hello" kehne jaisa kaam karti hai — matlab
 ping 8.8.8.8
 # SSH, Ports, aur Key-Lock Access (Detailed Concept)
 
+````markdown
 # SSH, Ports, aur Key-Lock Access (Complete Documentation)
 
 ## 1. Ports Kya Hain?
 
 Computer mein **Port** ek darwazay (door) ki tarah hota hai jo kisi specific service ya app ke liye khula hota hai.
 
-* **IP Address:** Aapka ghar ka pata (Address) hai.
-* **Port:** Aapke ghar ka specific darwaza hai (Jaise main door, back door, window).
-* **Example:** Web browsing ke liye Port **80/443** khula hota hai, aur remote management ke liye **Port 22**.
+**IP Address:** Aapka ghar ka pata (Address) hai.
+
+**Port:** Aapke ghar ka specific darwaza hai (Jaise main door, back door, window).
+
+**Example:** Web browsing ke liye Port **80/443** khula hota hai, aur remote management ke liye **Port 22**.
 
 ---
 
@@ -97,6 +100,7 @@ Jab aap baar baar kisi doosre laptop se pictures ya files lena chahte hain, toh 
 ### Key & Lock Kaise Kaam Karta Hai?
 
 1. **Public Key (Taala/Lock):** Ye aap apne dost/target ke laptop mein daal dete hain. Is ko koi bhi dekh le toh fark nahi parta.
+
 2. **Private Key (Chabi):** Ye sirf aapke apne laptop mein rehti hai. Is ko kisi ke saath share nahi kiya jata.
 
 Jab aapka laptop samne wale laptop se connect hone lagta hai, toh aapki **Chabi (Private Key)** us ke laptop par lage **Taale (Public Key)** se match hoti hai. Matching hone par darwaza bina password ke turant khul jata hai.
@@ -110,4 +114,9 @@ Jab aapka laptop samne wale laptop se connect hone lagta hai, toh aapki **Chabi 
 ```bash
 ssh-keygen
 ```
+````
+
+
+
+
 
