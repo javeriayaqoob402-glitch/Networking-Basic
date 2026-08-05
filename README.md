@@ -72,6 +72,8 @@ Ping command kisi doosre device ko "Hello" kehne jaisa kaam karti hai — matlab
 ping 8.8.8.8
 # SSH, Ports, aur Key-Lock Access (Detailed Concept)
 
+# SSH, Ports, aur Key-Lock Access (Complete Documentation)
+
 ## 1. Ports Kya Hain?
 Computer mein **Port** ek darwazay (door) ki tarah hota hai jo kisi specific service ya app ke liye khula hota hai.
 * **IP Address:** Aapka ghar ka pata (Address) hai.
@@ -86,7 +88,6 @@ Computer mein **Port** ek darwazay (door) ki tarah hota hai jo kisi specific ser
 ---
 
 ## 3. SSH Key & Lock Concept (Bina Password Access)
-
 Jab aap baar baar kisi doosre laptop se pictures ya files lena chahte hain, toh har baar password daalna pareshani banta hai. Is ko khatam karne ke liye hum **Public Key (Taala/Lock)** aur **Private Key (Chabi/Key)** ka concept use karte hain.
 
 ### Key & Lock Kaise Kaam Karta Hai?
@@ -97,18 +98,8 @@ Jab aapka laptop samne wale laptop se connect hone lagta hai, toh aapki **Chabi 
 
 ---
 
-## 4. Real Example: Target Laptop Se Pictures Lena
+## 4. Practical Implementation (Step-by-Step)
 
-**Step 1: Apne Laptop Par Key Pair (Chabi aur Taala) Banayein**
-# Public Key (Taala) Send Karne Aur Files Lene Ka Process
-
-Jab aapke laptop par Key Pair (`ssh-keygen` chalane ke baad) ban jata hai, toh uske baad bas ye steps follow karne hote hain:
-
----
-
-## Step 1: Apna Taala (Public Key) Remote Laptop Par Bhejna
-
-Aapko apni Public Key (`id_rsa.pub`) ko dost/target ke laptop par set karna hoga. Iske liye terminal me ye command chalayein:
-
-jasa ka ssh bandit0@bandit.labs.overthewire.org -p 2220
-ya bandit wala process ha jasa ham na solve kiya han inka level
+### Step 1: Apne Laptop Par Key Pair (Chabi aur Taala) Banayein
+```bash
+ssh-keygen
