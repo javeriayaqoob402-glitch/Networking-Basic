@@ -1,0 +1,263 @@
+# IPv4 Basics
+
+## What is IPv4?
+
+IPv4 stands for **Internet Protocol Version 4**.
+
+IPv4 is an addressing system used to identify devices on a network.
+
+Example:
+
+192.168.1.10
+
+An IPv4 address contains **4 octets**.
+
+Example:
+
+192 . 168 . 1 . 10
+ ↑     ↑    ↑    ↑
+Octet Octet Octet Octet
+
+Each octet contains **8 bits**.
+
+Therefore:
+
+4 octets × 8 bits = 32 bits
+
+So, IPv4 is a **32-bit address**.
+
+---
+
+## IPv4 Range
+
+Each IPv4 octet can have a value from:
+
+0 to 255
+
+Example:
+
+192.168.1.10
+
+All four values are within the valid range.
+
+---
+
+# Decimal to Binary Conversion
+
+To convert an IPv4 decimal octet into binary, use these 8-bit place values:
+
+128  64  32  16  8  4  2  1
+
+Each octet must be represented using **8 bits**.
+
+---
+
+## Example 1: Convert 192 to Binary
+
+192 = 128 + 64
+
+Therefore:
+
+128 64 32 16 8 4 2 1
+ 1  1  0  0 0 0 0 0
+
+So:
+
+192 = 11000000
+
+---
+
+## Example 2: Convert 168 to Binary
+
+168 = 128 + 32 + 8
+
+Therefore:
+
+128 64 32 16 8 4 2 1
+ 1  0  1  0 1 0 0 0
+
+So:
+
+168 = 10101000
+
+---
+
+## Example 3: Convert 1 to Binary
+
+1 = 00000001
+
+---
+
+## Example 4: Convert 10 to Binary
+
+10 = 8 + 2
+
+Therefore:
+
+128 64 32 16 8 4 2 1
+ 0  0  0  0 1 0 1 0
+
+So:
+
+10 = 00001010
+
+---
+
+# Complete IPv4 Conversion
+
+Let's convert:
+
+192.168.1.10
+
+Convert each octet separately:
+
+192 = 11000000
+
+168 = 10101000
+
+1 = 00000001
+
+10 = 00001010
+
+Therefore:
+
+192.168.1.10
+
+=
+
+11000000.10101000.00000001.00001010
+
+This is the **32-bit binary representation** of the IPv4 address.
+
+---
+
+# Binary to Decimal Conversion
+
+To convert binary to decimal, use these values:
+
+128  64  32  16  8  4  2  1
+
+If a binary digit is **1**, add its corresponding value.
+
+If it is **0**, ignore that value.
+
+---
+
+## Example: 11000000
+
+128 64 32 16 8 4 2 1
+ 1  1  0  0 0 0 0 0
+
+Add:
+
+128 + 64 = 192
+
+Therefore:
+
+11000000 = 192
+
+---
+
+## Example: 10101000
+
+128 64 32 16 8 4 2 1
+ 1  0  1  0 1 0 0 0
+
+Add:
+
+128 + 32 + 8 = 168
+
+Therefore:
+
+10101000 = 168
+
+---
+
+# Complete Binary to IPv4 Conversion
+
+Binary:
+
+11000000.10101000.00000001.00001010
+
+Convert each octet:
+
+11000000 = 192
+
+10101000 = 168
+
+00000001 = 1
+
+00001010 = 10
+
+Result:
+
+192.168.1.10
+
+---
+
+# Important Rules
+
+- IPv4 = **32 bits**
+- IPv4 = **4 octets**
+- Each octet = **8 bits**
+- Each octet range = **0–255**
+- Binary place values:
+
+128 64 32 16 8 4 2 1
+
+- Decimal → Binary: select values that add up to the decimal number.
+- Binary → Decimal: add the values where the binary digit is 1.
+
+---
+
+# Practice
+
+Convert these decimal numbers to binary:
+
+1. 192
+2. 168
+3. 10
+4. 255
+5. 172
+6. 16
+7. 64
+8. 127
+
+Convert these binary numbers to decimal:
+
+1. 11000000
+2. 10101000
+3. 00001010
+4. 11111111
+5. 10101100
+6. 00010000
+
+Convert these complete IPv4 addresses into binary:
+
+192.168.1.1
+
+10.0.0.5
+
+172.16.10.20
+
+---
+
+# Quick Summary
+
+**IPv4 = 32 bits**
+
+**4 octets × 8 bits = 32 bits**
+
+Example:
+
+192.168.1.10
+
+Binary:
+
+11000000.10101000.00000001.00001010
+
+The main binary values are:
+
+128 64 32 16 8 4 2 1
+
+Understanding IPv4 and binary conversion is important for networking, subnetting, and penetration testing.
